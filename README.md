@@ -1,13 +1,13 @@
 About r-compute.es
 ==================
 
-Home: http://acdelre.weebly.com
+Home: http://acdelre.com
 
 Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: This package contains several functions for calculating the most widely used effect sizes (ES), along with their variances, confidence intervals and p-values.  The output includes ES's of d (mean difference), g (unbiased estimate of d), r (correlation coefficient), z' (Fisher's z), and OR (odds ratio and log odds ratio). In addition, NNT (number needed to treat), U3, CLES (Common Language Effect Size) and Cliff's Delta are computed. This package uses recommended formulas as described in The Handbook of Research Synthesis and Meta-Analysis (Cooper, Hedges, & Valentine, 2009).
+Summary: Several functions are available for calculating the most widely used effect sizes (ES), along with their variances, confidence intervals and p-values.  The output includes ES's of d (mean difference), g (unbiased estimate of d), r (correlation coefficient), z' (Fisher's z), and OR (odds ratio and log odds ratio). In addition, NNT (number needed to treat), U3, CLES (Common Language Effect Size) and Cliff's Delta are computed. This package uses recommended formulas as described in The Handbook of Research Synthesis and Meta-Analysis (Cooper, Hedges, & Valentine, 2009).
 
 
 
@@ -116,9 +116,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
