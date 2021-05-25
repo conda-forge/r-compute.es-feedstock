@@ -35,7 +35,7 @@ test:
 
 about:
   home: http://acdelre.com
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Several functions are available for calculating the most widely used effect sizes
     (ES), along with their variances, confidence intervals and p-values.  The output
     includes ES's of d (mean difference), g (unbiased estimate of d), r (correlation
