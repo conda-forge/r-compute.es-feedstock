@@ -3,7 +3,7 @@ About r-compute.es
 
 Home: http://acdelre.com
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-compute.es-feedstock/blob/master/LICENSE.txt)
 
