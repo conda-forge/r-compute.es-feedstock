@@ -1,4 +1,4 @@
-{% set version = '0.2-5' %}
+{% set version = "0.2-6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,18 +9,23 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/compute.es_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/compute.es/compute.es_{{ version }}.tar.gz
-  sha256: a826d309928f56e9a38ae330009354fb4794e5dab0bf6e5deee0bc41871e2300
+  sha256: 96ceedb1b1230b427e04b8162c11750bab2a79fd908c3e68be4cf73d145fedbc
 
 build:
-  number: 5
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -32,7 +37,7 @@ test:
     - "\"%R%\" -e \"library('compute.es')\""  # [win]
 
 about:
-  home: http://acdelre.com
+  home: https://acdelre.github.io
   license: GPL-2.0-only
   summary: Several functions are available for calculating the most widely used effect sizes
     (ES), along with their variances, confidence intervals and p-values.  The output
@@ -40,7 +45,8 @@ about:
     coefficient), z' (Fisher's z), and OR (odds ratio and log odds ratio). In addition,
     NNT (number needed to treat), U3, CLES (Common Language Effect Size) and Cliff's
     Delta are computed. This package uses recommended formulas as described in The Handbook
-    of Research Synthesis and Meta-Analysis (Cooper, Hedges, & Valentine, 2009).
+    of Research Synthesis and Meta-Analysis (Cooper, Hedges, & Valentine, 2009). A free
+    web application is available at <https://acdelre.github.io/apps/compute_es/>.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
